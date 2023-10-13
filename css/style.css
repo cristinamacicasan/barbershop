@@ -1,76 +1,74 @@
 :root {
   --heading-font-family: "Raleway", sans-serif;
   --text-font-family: "Open Sans", sans-serif;
-  --link-color:#fff;
-  --link-hover-color: #ff6c00
+  --link-color: #fff;
+  --link-hover-color: #ff6c00;
 }
 
-.global-header{
-background-color: #333; 
-display: flex;   
+.global-header {
+  background-color: #333;
+  display: flex;
 }
 
-.nav-container{
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: space-between;
+.nav-container {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.global-header .main-navigation{
-display: flex;
-flex-direction: row;
+.global-header .main-navigation {
+  display: flex;
+  flex-direction: row;
 }
-.global-header .main-navigation ul{
-    display: flex;
-    width: 405px;
-    justify-content: space-between;
-    list-style-type: none;
-
+.global-header .main-navigation ul {
+  display: flex;
+  width: 405px;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
-.contact-container{
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
-    align-items: center;
+.contact-container {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .global-header .main-navigation a:link,
-.global-header .main-navigation a:visited{
-color: var(--link-color);
-text-decoration: none;
-font-family: var(--text-font-family);
-font-size: 12px;
-font-weight: 600;
-line-height: 16px;
-letter-spacing: 0.09em;
-
+.global-header .main-navigation a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.09em;
 }
 
-.global-header .main-navigation a:active{
-    color: #ff0000;
+.global-header .main-navigation a:active {
+  color: #ff0000;
 }
 
 h1,
 h2,
 h3,
-h4
+h4,
 h5,
-h6{
-font-family: var(--heading-font-family);    
-font-weight: 700;
+h6 {
+  font-family: var(--heading-font-family);
+  font-weight: 700;
 }
 
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-.global-header .main-navigation a:hover{
-color:var(--link-hover-color)
+.global-header .main-navigation a:hover {
+  color: var(--link-hover-color);
 }
 .phone-number {
-  color:var(--link-color);
+  color: var(--link-color);
   font-family: var(--text-font-family);
   font-size: 12px;
   font-weight: 600;
@@ -78,36 +76,38 @@ color:var(--link-hover-color)
   letter-spacing: 0.1em;
 }
 
-.phone-number:hover{
-    color: var(--link-hover-color);
+.phone-number:hover {
+  color: var(--link-hover-color);
 }
 
-.button{
-color: var(--link-color);
-font-family:var(--text-font-family);
-font-size: 12px;
-font-weight: 600;
-line-height: 16px;
-letter-spacing: 0.09em;
-text-transform: uppercase;
-background-color: transparent;
-border: 1px solid #ff6c00;
-border-radius: 25px;
-padding-left: 25px;
-padding-right: 25px;
-padding: 12px 25px;
-
+.button {
+  color: var(--link-color);
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding: 12px 25px;
 }
 
-button:hover{
-    background-color: #fff;
-    color: #ff6c00;
-    border: 1px solid #fff;
+button:hover {
+  background-color: #fff;
+  color: #ff6c00;
+  border: 1px solid #fff;
 }
-/*
-font-family: Open Sans;
-font-size: 12px;
-font-weight: 600;
-line-height: 16px;
-letter-spacing: 0.09em;
-text-align: left;
+
+.heading-with-dash {
+  display: flex;
+  align-items: center;
+}
+
+.heading-with-dash h3 {
+  margin-left: 20px;
+  text-transform: uppercase;
+}
