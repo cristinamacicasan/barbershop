@@ -64,6 +64,12 @@ button {
   cursor: pointer;
 }
 
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .global-header .main-navigation a:hover {
   color: var(--link-hover-color);
 }
@@ -91,8 +97,6 @@ button {
   background-color: transparent;
   border: 1px solid #ff6c00;
   border-radius: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
   padding: 12px 25px;
 }
 
@@ -102,25 +106,26 @@ button:hover {
   border: 1px solid #fff;
 }
 
+.section {
+  padding: 130px 55px;
+}
+
 .prices-section {
-  background: url("../images/services-section-bg-image.jpg");
+  background-image: url("../images/services-section-bg-image.jpg");
+  background-color: #111319;
   background-size: cover;
-  padding-top: 130px;
-  padding-right: 55px;
-  padding-bottom: 130px;
-  padding-left: 55px;
 }
 
 .heading-with-dash {
   display: flex;
   align-items: center;
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 
 .heading-with-dash h3 {
   margin-left: 20px;
   text-transform: uppercase;
-
   font-family: var(--heading-font-family);
   font-size: 11px;
   font-weight: 600;
@@ -138,9 +143,10 @@ button:hover {
 }
 .prices {
   display: flex;
-  margin-top: 46px;
+  margin: 50px 0;
 }
 .prices-list {
+  padding: 30px 40px;
   font-family: var(--text-font-family);
   font-size: 18px;
   font-weight: 400;
@@ -149,12 +155,34 @@ button:hover {
   color: rgba(157, 164, 189, 1);
   list-style: none;
   flex-grow: 1;
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.prices-list:hover {
+  background-image: linear-gradient(rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2));
 }
 .prices-list li {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
+}
+
+.prices-list li:not(:last-child) {
+  margin-bottom: 20px;
 }
 .prices-list li .prices-dash {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
   height: 1px;
+  background: rgba(157, 164, 189, 0.12);
+}
+
+.prices-list li .prices-dash {
+  margin-left: 6px;
+  margin-right: 6px;
 }
