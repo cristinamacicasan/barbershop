@@ -3,6 +3,7 @@
   --text-font-family: "Open Sans", sans-serif;
   --link-color: #fff;
   --link-hover-color: #ff6c00;
+  --heading-alternative-color: #303030;
 }
 
 .global-header {
@@ -26,6 +27,11 @@
   width: 405px;
   justify-content: space-between;
   list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-container {
@@ -80,6 +86,7 @@ button {
   font-weight: 600;
   line-height: 16px;
   letter-spacing: 0.1em;
+  text-decoration: none;
 }
 
 .phone-number:hover {
@@ -87,7 +94,6 @@ button {
 }
 
 .button {
-  color: var(--link-color);
   font-family: var(--text-font-family);
   font-size: 12px;
   font-weight: 600;
@@ -100,6 +106,14 @@ button {
   padding: 12px 25px;
 }
 
+.section-dark button {
+  color: var(--link-color);
+}
+
+.section-light button {
+  color: #303030;
+}
+
 button:hover {
   background-color: #fff;
   color: #ff6c00;
@@ -108,6 +122,21 @@ button:hover {
 
 .section {
   padding: 130px 55px;
+}
+
+.section-light {
+  background-color: #fff;
+  color: #555;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.section-light h1,
+.section-light .section-heading,
+.section-light .section-sub-heading {
+  color: var(--heading-alternative-color);
 }
 
 .prices-section {
@@ -141,6 +170,27 @@ button:hover {
   letter-spacing: 0.05em;
   color: #ffffff;
 }
+
+.section-with-two-columns {
+  display: flex;
+}
+
+.section-with-two-columns > *:nth-child(2) {
+  margin-left: 64px;
+}
+
+.section-with-two-columns > * {
+  flex: 0 1 50%;
+}
+
+.section-images {
+  display: flex;
+}
+
+.section-images img + img {
+  margin-left: 30px;
+}
+
 .prices {
   display: flex;
   margin: 50px 0;
@@ -175,9 +225,7 @@ button:hover {
   margin-bottom: 20px;
 }
 .prices-list li .prices-dash {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: auto;
+  flex: 1 0 auto;
   height: 1px;
   background: rgba(157, 164, 189, 0.12);
 }
