@@ -214,8 +214,89 @@
     <!--book service modal-->
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
-        <button class="close-btn" data-modal-close>&times;</button>
-        Continut modal
+        <svg class="close-btn" data-modal-close>
+          <use xlink:href="./symbol-defs.svg#icon-close"></use>
+        </svg>
+
+        <form action="" method="get">
+          <div class="input-container">
+            <label class="form-label" for="name">Name</label>
+            <div class="input-container">
+              <input
+                class="textfield"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
+              <svg>
+                <use
+                  xlink:href="./symbol-defs.svg#icon-person-black-18dp-1"
+                ></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label" for="email">Email</label>
+            <div class="input-container">
+              <input
+                class="textfield"
+                type="text"
+                name="email"
+                id="email"
+                required
+              />
+              <svg>
+                <use
+                  xlink:href="./symbol-defs.svg#icon-email-black-18dp-1"
+                ></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label">Comments</label>
+            <textarea placeholder="Enter the text"></textarea>
+          </div>
+
+          <div class="input-container terms-and-condition-container">
+            <!--
+            <label class="terms-and-conditions">
+              <input
+                type="checkbox"
+                name="terms-and-conditions"
+                value="checked"
+              />
+              <span
+                >I agree with the letter and accept the
+                <a href="#"> Terms and Conditions </a>
+              </span>
+            </label>-->
+
+            <input
+              type="checkbox"
+              class="terms-and-condition-check"
+              name="terms-and-conditions-check"
+              id="terms-and-conditions-check"
+              value="checked"
+            />
+
+            <label
+              class="terms-and-conditions-label"
+              for="terms-and-conditions-check"
+            >
+              <svg class="icon-checkbox">
+                <use xlink:href="./symbol-defs.svg#icon-Vector-1"></use>
+              </svg>
+              <span
+                >I agree with the letter and accept the
+                <a href="#"> Terms and Conditions </a>
+              </span>
+            </label>
+          </div>
+          <input type="submit" value="Send" />
+        </form>
       </div>
     </div>
 

@@ -4,6 +4,8 @@
   --link-color: #fff;
   --link-hover-color: #ff6c00;
   --heading-alternative-color: #303030;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --icon-normal-size:18px
 }
 
 .global-header {
@@ -18,10 +20,7 @@
   justify-content: space-between;
 }
 
-.global-header .main-navigation {
-  display: flex;
-  flex-direction: row;
-}
+
 .global-header .main-navigation ul {
   display: flex;
   width: 405px;
@@ -66,10 +65,6 @@ h6 {
   font-weight: 700;
 }
 
-button {
-  cursor: pointer;
-}
-
 .centered-container {
   display: flex;
   justify-content: center;
@@ -104,6 +99,19 @@ button {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   padding: 12px 25px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border var(--transition);
+}
+
+button:hover {
+  background-color: #fff;
+  color: #ff6c00;
+  border: 1px solid #fff;
+}
+
+.section {
+  padding: 130px 55px;
 }
 
 .section-dark button {
@@ -112,12 +120,6 @@ button {
 
 .section-light button {
   color: #303030;
-}
-
-button:hover {
-  background-color: #fff;
-  color: #ff6c00;
-  border: 1px solid #fff;
 }
 
 .section {
@@ -210,10 +212,13 @@ button:hover {
     #171a24 0%,
     rgba(23, 26, 36, 0.2) 100%
   );
+  transition: background-image var(--transition);
+  --webkit-transition: background-image var(--transition):
 }
 
 .prices-list:hover {
   background-image: linear-gradient(rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2));
+  cursor: pointer;
 }
 .prices-list li {
   display: flex;
@@ -236,7 +241,7 @@ button:hover {
 }
 
 .modal {
-  position: fixed;
+  position:fixed;
   width: 100vw;
   height: 100vw;
   top: 0;
@@ -244,24 +249,153 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color:rgba(0, 0, 0, 0.2);
 }
 
 .modal-content {
+  position: absolute;
   background-color: #fff;
-  padding: 20px;
-  width: 90%;
+  padding:50px 20px;
+  width: 528px;
+  height: 581px;
 }
 .is-hidden {
   visibility: hidden;
 }
 
 .close-btn {
-  background-color: #ff0000;
-  border: 1px solid #ff0000;
-  color: #fff;
-  cursor: pointer;
   position: absolute;
-  top: 0;
-  right: 0;
+  cursor: pointer;
+  top: 14px;
+  right: 14px;
+  width: var(--icon-normal-size);
+  height: var(--icon-normal-size);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+  padding: 6px;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.input-container svg{
+  width: var(--icon-normal-size);
+  height: var(--icon-normal-size);
+  position: absolute;
+  top: calc(50%-9px);
+  left: 12px;
+}
+
+
+.textfield{
+  height: 40px;
+  padding: 11px 12px 11px 42px;
+}
+
+textarea{
+  height: 120px;
+  padding: 12px 16px;
+}
+textarea::placeholder{
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color:rgba(117, 117, 117, 0.5) ;
+}
+
+.textfield,
+textarea {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  padding: 11px 12px 11px 42px;
+}
+
+.textfield:focus,
+textarea:focus{
+  border: 1px solid rgba(33, 150, 243, 1);
+}
+
+.textfield:focus+svg{
+  fill:rgba(33, 150, 243, 1)
+}
+
+.form-label{
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 1);
+}
+
+.terms-and-conditions-label{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+
+}
+
+.terms-and-conditions-label span{
+  color: #757575;
+  font-size: 14px;
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  word-wrap: break-word;
+}
+.terms-and-condition-container{
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 8px;
+}
+.terms-and-conditions-label a{
+  color: #2196f3;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  word-wrap: break-word
+}
+
+.terms-and-conditions-label svg{
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: calc(50%-7.5px);
+  left: 0;
+}
+
+.terms-and-conditions-check:not(:checked){
+  visibility: hidden;
+}
+
+
+.terms-and-conditions-check:checked+label>svg{
+  display: none;
 }
